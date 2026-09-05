@@ -22,6 +22,22 @@ are the reliable way to get it onto your bar in one go. Move it later with
 what it tracks from its own settings panel — no editing `shell.json` by hand
 required.
 
+**No external dependencies.** Everything it reads (`/proc/stat`,
+`/proc/meminfo`, `/proc/net/dev`, `/sys/class/hwmon`, `df`) is standard on
+any Linux kernel and any Omarchy install — no `lm_sensors`, no extra
+packages to install first.
+
+### Removing it
+
+```bash
+omarchy plugin remove kdm.resources
+```
+
+Takes it off the bar and deletes `~/.config/omarchy/plugins/kdm.resources`
+in one step (it'll ask you to confirm first). Its settings (what's tracked,
+in what order) live in your `shell.json` bar-widget entry and are removed
+along with it — nothing else on your system is touched.
+
 ## What it tracks
 
 | Metric | Source | Notes |

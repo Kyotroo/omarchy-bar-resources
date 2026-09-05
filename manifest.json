@@ -4,7 +4,7 @@
   "name": "Resources",
   "version": "1.0.0",
   "author": "kdm",
-  "description": "Live CPU and memory usage in the bar, click for btop",
+  "description": "Live CPU, memory, disk, temperature, and network icons that fill up with usage, like the built-in wifi/battery icons. Click for a settings panel.",
   "kinds": [
     "bar-widget"
   ],
@@ -13,7 +13,7 @@
   },
   "barWidget": {
     "displayName": "Resources",
-    "description": "Live CPU and memory usage, click for btop",
+    "description": "CPU, memory, disk, temperature, and network usage as fill-up icons, with a settings panel to reorder and toggle them",
     "category": "System",
     "allowMultiple": false
   }
