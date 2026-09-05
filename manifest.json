@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "kdm.resources",
+  "name": "Resources",
+  "version": "1.0.0",
+  "author": "kdm",
+  "description": "Live CPU and memory usage in the bar, click for btop",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "Resources.qml"
+  },
+  "barWidget": {
+    "displayName": "Resources",
+    "description": "Live CPU and memory usage, click for btop",
+    "category": "System",
+    "allowMultiple": false
+  }
+}
