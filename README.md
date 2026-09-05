@@ -6,7 +6,7 @@ usage, the same way the built-in wifi and battery icons do. Click it for a
 settings panel: what to track, in what order, and whether the exact numbers
 are shown next to the icons.
 
-![CPU, memory, disk, and temperature icons filling up live, then the settings panel: toggling metrics, reordering with the arrow buttons, and switching accent color](docs/demo.gif)
+![Installing from GitHub, then live in the bar under real CPU load, then the settings panel: every row showing its current value, toggling temperature off and network speed on with the bar updating live](docs/demo.gif)
 
 ## Installation
 
@@ -43,6 +43,8 @@ unavailable instead of guessing.
 
 Click the widget to open it — no other window behind it, unlike some
 "resource monitor" bar widgets that just shell out to `btop`.
+
+<img src="docs/settings-panel.png" alt="Settings panel: Show percentage and Use accent color toggles, then five metric rows each with reorder arrows, a live current reading, and its own on/off switch" width="360">
 
 - **Reorder** — the ▲▼ buttons on each metric row move it left/right in the
   bar
