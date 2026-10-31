@@ -17,7 +17,7 @@ Panel {
   ipcTarget: "kdm.resources"
   manageIpc: false
 
-  readonly property color foreground: bar ? bar.barForeground : Color.foreground
+  readonly property color foreground: Color.popups.text
   readonly property color urgent: bar ? bar.urgent : Color.urgent
   readonly property string fontFamily: bar ? bar.fontFamily : Style.font.family
 
@@ -382,7 +382,7 @@ Panel {
             fontFamily: root.fontFamily
             fillColor: root.metricUrgent(metricSlot.modelData)
               ? root.urgent
-              : (root.accentFill ? Color.accent : root.foreground)
+              : (root.accentFill ? Color.accent : root.barForeground)
           }
           Text {
             visible: metricSlot.modelData !== "net" && (metricSlot.modelData === "temp" || root.showPercent)
@@ -396,7 +396,7 @@ Panel {
             // right-aligned, a short value like "2%" sat flush against the
             // *next* metric's icon instead of its own.
             horizontalAlignment: Text.AlignLeft
-            color: root.foreground
+            color: root.barForeground
             font.family: root.fontFamily
             font.pixelSize: Style.font.caption
           }
@@ -413,7 +413,7 @@ Panel {
               anchors.verticalCenter: parent.verticalCenter
               Text {
                 text: "↓"
-                color: root.foreground
+                color: root.barForeground
                 font.family: root.fontFamily
                 font.pixelSize: Style.font.caption
               }
@@ -422,7 +422,7 @@ Panel {
                 text: root.netReady ? Model.formatRate(root.netDownBps) : "…"
                 width: netWidthMetrics.width
                 horizontalAlignment: Text.AlignLeft
-                color: root.foreground
+                color: root.barForeground
                 font.family: root.fontFamily
                 font.pixelSize: Style.font.caption
               }
@@ -432,7 +432,7 @@ Panel {
               anchors.verticalCenter: parent.verticalCenter
               Text {
                 text: "↑"
-                color: root.foreground
+                color: root.barForeground
                 font.family: root.fontFamily
                 font.pixelSize: Style.font.caption
               }
@@ -441,7 +441,7 @@ Panel {
                 text: root.netReady ? Model.formatRate(root.netUpBps) : "…"
                 width: netWidthMetrics.width
                 horizontalAlignment: Text.AlignLeft
-                color: root.foreground
+                color: root.barForeground
                 font.family: root.fontFamily
                 font.pixelSize: Style.font.caption
               }
@@ -453,7 +453,7 @@ Panel {
       Text {
         visible: !root.anyTracked
         text: ""   // GLYPH:fallback
-        color: Qt.darker(root.foreground, 1.5)
+        color: Qt.darker(root.barForeground, 1.5)
         font.family: root.fontFamily
         font.pixelSize: Style.font.body
         anchors.verticalCenter: parent.verticalCenter

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "kdm.resources",
   "name": "Resources",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "kdm",
   "description": "Live CPU, memory, disk, temperature, and network icons that fill up with usage, like the built-in wifi/battery icons. Click for a settings panel.",
   "kinds": [
